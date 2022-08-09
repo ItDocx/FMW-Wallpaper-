@@ -9,10 +9,12 @@ import androidx.fragment.app.FragmentManager;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -49,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
     private CardView indianCard,asianCrd,usaCard,spanishCard;
 
 
+    private static final int pos_close = 0;
+    private static final int pos_DashBoard = 1;
+    private static final int pos_Indian = 2;
+    private static final int pos_Asian = 3;
+    private static final int pos_Spanish = 4;
+    private static final int pos_Usa = 5;
+    private static final int pos_Aboutus = 6;
+    private static final int pos_Logout = 7;
+
+    private String[] screenTitle;
+    private Drawable[] screenIcons;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
         asianCrd = findViewById(R.id.asian_main_btn);
         spanishCard = findViewById(R.id.spanish_main_btn);
         dashBannerCont = findViewById(R.id.dashboard_Banner_Container);
+
+        toolbar = findViewById(R.id.main_toolbar);
+        setSupportActionBar(toolbar);
+
+
 
         // Initialize Ads
         MobileAds.initialize(MainActivity.this, new OnInitializationCompleteListener() {
@@ -83,8 +103,6 @@ public class MainActivity extends AppCompatActivity {
         // Adding Dialog
         dashBoardDialog = new Dialog(MainActivity.this);
         dashBoardDialog.setContentView(R.layout.custom_dialoge);
-     /*   //Implement Toolbar
-        toolbar = findViewById(R.id.main_toolbar);
 
         // Toolbar Listener
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -98,13 +116,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-      */
+
         // Nature Listener
         indianCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (dashBoardInter != null){
+
 
                     dashBoardInter.show(MainActivity.this);
                     dashBoardInter.setFullScreenContentCallback(new FullScreenContentCallback() {
@@ -117,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
                             IndianCategory indianFrag = new IndianCategory();
                             indianFragManager.beginTransaction().replace(R.id.main_frame_forFrags,indianFrag).addToBackStack(null).commit();
 
+                            onBackPressed = true;
 
                             // Implement Nature Interstitial Ad
                             getIndianInter("https://female-models-wallpapers-default-rtdb.firebaseio.com/indianInter");
@@ -133,8 +153,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-
-
 
             }
         });
@@ -155,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
                             //Implement Artistic Interstetial
                             getUsaInter("https://female-models-wallpapers-default-rtdb.firebaseio.com/usaInter");
                             super.onAdDismissedFullScreenContent();
+
+                            onBackPressed = true;
                         }
 
                         @Override
@@ -189,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
                             //Implement Anonymous Interstetial
                             getAsianInter("https://female-models-wallpapers-default-rtdb.firebaseio.com/asianInter");
                             super.onAdDismissedFullScreenContent();
+
+                            onBackPressed = true;
                         }
 
                         @Override
@@ -223,6 +245,9 @@ public class MainActivity extends AppCompatActivity {
                             //Implement Gaming Interstetial
                             getSpanishInter("https://female-models-wallpapers-default-rtdb.firebaseio.com/spanishInter");
                             super.onAdDismissedFullScreenContent();
+
+                            onBackPressed = true;
+
                         }
 
                         @Override

@@ -8,7 +8,10 @@
     tools:context=".Fragments.USACategory">
 
 
+
+
         <androidx.recyclerview.widget.RecyclerView
+
             android:padding="@dimen/_2sdp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,6 +24,10 @@
             android:id="@+id/usaRecycler"/>
 
         <ProgressBar
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="@dimen/_75sdp"
             android:layout_height="@dimen/_75sdp"
             android:indeterminate="true"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,9 +8,11 @@
     android:layout_height="match_parent"
     android:background="@color/background_clr"
     tools:context=".MainActivity">
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <include
-        android:id="@+id/main_toolbar"
+        android:id="@+id/activitymain_toolbar"
         layout="@layout/custom_toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +24,7 @@
         android:id="@+id/dashboard_Banner_Container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/activitymain_toolbar"
         />
 
 <FrameLayout
@@ -158,5 +161,5 @@
 </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

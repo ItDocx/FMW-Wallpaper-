@@ -8,18 +8,23 @@
     tools:context=".Fragments.IndianCategory">
 
     <androidx.recyclerview.widget.RecyclerView
+
+        app:layout_constraintBottom_toBottomOf="parent"
         android:padding="@dimen/_2sdp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/wallpaper_items"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        android:paddingBottom="@dimen/_60sdp"
         android:scrollbars="vertical"
         android:scrollbarThumbVertical="@drawable/ic_scroll"
         android:id="@+id/indianRecycler"/>
 
     <ProgressBar
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="@dimen/_75sdp"
         android:layout_height="@dimen/_75sdp"
         android:indeterminate="true"
@@ -28,6 +33,5 @@
         android:layout_gravity="center"
         android:id="@+id/indianProgress"
         />
-
 
 </FrameLayout>

@@ -58,6 +58,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:21.1.0'
     //noinspection NotInterpolated
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.10'
+    // Navigation drawer
+    //implementation 'com.yarolegovich:sliding-root-nav:1.1.1'
 
 
 }
