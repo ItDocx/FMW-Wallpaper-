@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "196224241314",
+    "firebase_url": "https://female-models-wallpapers-default-rtdb.firebaseio.com",
+    "project_id": "female-models-wallpapers",
+    "storage_bucket": "female-models-wallpapers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196224241314:android:43caa737edb58e234f51fb",
+        "android_client_info": {
+          "package_name": "com.brainsMedia.FMW"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196224241314-7fe1i5dldt4v31t9abcjj0k6eh62kan9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt0AyUO1P6uNp_aEWzh8M4-rNB3eS2IvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196224241314-7fe1i5dldt4v31t9abcjj0k6eh62kan9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

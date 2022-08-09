@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Female Models Wallpapers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+    <string name="aboutUS">About Us</string>
+    <string name="developer">Moazam Saleem</string>
+    <string name="gmail">ItDocx1@gmail.com</string>
+    <string name="share">Share</string>
+    <string name="RateUs">Rate Us:</string>
+    <string name="brains_media">Brains Media</string>
+    <string name="owner">Owner:</string>
+    <string name="moazam_saleem">Moazam Saleem</string>
+    <string name="developed_by">Developed By:</string>
+    <string name="g_mail">Gmail</string>
+    <string name="reach_us">Reach Us:</string>
+    <string name="address">Address:</string>
+    <string name="Address_office">J789+2V2, Main sheikhpura Road, Khan Tower Near Sada Hussain Imam Baargaah, Taragarh Shahdara Town, Lahore, Sheikhupura, Punjab, Pakistan</string>
+    <string name="close">Close</string>
+    <string name="itdocx1_gmail_com">ItDocx1@gmail.com</string>
+
+</resources>
